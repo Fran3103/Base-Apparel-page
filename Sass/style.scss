@@ -1,0 +1,137 @@
+@import url(/Sass/cssreload.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+$DesaturatedRed: hsl(0, 36%, 70%);
+$SoftRed: hsl(0, 93%, 68%);
+$bg-color: #fff9f9;
+
+$DarkGrayishRed: hsl(0, 6%, 24%);
+
+$font:  'Josefin Sans';
+body{
+    background-color: $bg-color;
+    font-family: $font;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    .logo{
+        width: 100%;
+        align-self: start;
+        padding: 30px;
+        img{width: 100px;}
+        }
+ 
+    
+        .img-desktop{
+            display: none;
+        }
+    
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        gap: 10px;
+
+        .title{
+            margin: 15px 0;
+            font-size: 2.6em;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            color: $DarkGrayishRed;
+            .span{
+                color: $DesaturatedRed;
+                font-weight: 300;   
+            }
+        }
+        .parrafo{
+            
+            margin-bottom: 15px;
+            line-height: 1.5;
+            ;
+            font-weight: 600;
+            font-size: 0.9em;
+            color: $DesaturatedRed;
+            text-align: center;
+        }
+    }
+
+
+    form{
+        width: 100%;
+        .email{
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        border: 1px solid $DarkGrayishRed;
+        background-color: transparent;
+        padding: 20px;
+
+       
+    }
+    ::placeholder{
+        color: $DesaturatedRed;
+        font-size: 1em;
+        
+    }
+    button{
+        position:absolute;
+        width: 80px;
+        height: 52px;
+        border-radius: 30px;
+        right: 25px;
+        margin-top: -1px;
+        border: none;
+        box-shadow: 1px 10px 20px 1px $DesaturatedRed;
+        background:  linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    }
+    button:hover{
+        cursor: pointer;
+        background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 90%, 80%));
+    }
+    .error{
+        position: absolute;
+        left: 240px;
+        bottom: 0;
+        display: none;
+    }
+}
+
+
+
+
+}
+
+
+
+
+footer{
+    
+    .attribution { 
+        margin: 30px 0;
+        font-size: 13px;
+        text-align: center; 
+        a { color: hsl(228, 45%, 44%); }
+    }
+
+}
+
+@media screen and (min-width:720px) {
+    main{
+        .img-mobile{
+            display: none;
+        }
+        .img-desktop{
+            display: flex;
+        }
+    
+}}
